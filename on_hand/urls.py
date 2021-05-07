@@ -16,7 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from . views import homepage
+
 urlpatterns = [
+    path('', homepage),
     path('inventory/', include('inventory.urls')),
     path('admin/', admin.site.urls),
 ]
+
+admin.site.site_header = 'Camerentals'
+admin.site.index_title = 'Camerentals Administration'

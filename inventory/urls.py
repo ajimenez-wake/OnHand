@@ -2,5 +2,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.CameraListView.as_view(), name='camera_list_view'),
 ]
