@@ -1,0 +1,6 @@
+FROM registry.access.redhat.com/ubi8/python-38
+
+USER 0
+RUN yum -y install 
+
+git clone https://github.com/sclorg/django-ex.git app-src
