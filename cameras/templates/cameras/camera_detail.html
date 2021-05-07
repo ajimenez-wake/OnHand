@@ -1,0 +1,25 @@
+{% extends parent_template|default:"cameras/base_camera.html" %}
+
+{% block title %}
+{{ block.super }} - {{ camera.manufacturer}} {{ camera.model }}
+{% endblock %}
+
+
+{% block content %}
+  <div id="bodyContainer">
+    <div id="bodyHeader">
+        <h3>{{ camera.model}}</h3>
+        <h4>{{ camera.manufacturer}}</h4>
+    </div>
+      <div id="bodyContent">
+      <div id="showcase">
+        <img src={{ camera.picture_url }}>
+      </div>
+      <div class="text">
+        <p>Sensor: {{ camera.sensor }}</p>
+        <p>{{ camera.description }}</p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

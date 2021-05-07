@@ -8,7 +8,7 @@
 }
 
 body {
-	background-color: rgb(238, 240, 244);
+	background-color: rgb(179, 180, 184);
 	font-family: 'Open Sans', 'sans-serif';	
 }
 h1, h2, h3, h4, h5, h6, p, a {
@@ -42,9 +42,9 @@ h4 {
 	color: rgb(238, 240, 244);
 }
 
-p {
+.text p {
 	font-size: 18px;
-	padding-top: 20px;
+	padding-top: .25em;
 	padding-left: 20px;
 	padding-right: 20px;	
 }
@@ -143,8 +143,8 @@ a:hover {
 	margin-right: auto;
 	margin-top: 100px;
 	z-index: 10;
-	background-color: rgb(252, 252, 255);
-	height: 500px;	
+	background-color: rgb(216, 216, 216);
+	min-height: 500px;	
 }
 
 #bodyHeader {
@@ -152,6 +152,69 @@ a:hover {
 	position: relative;
 	background-color: rgb(51, 51, 51);
 	text-align: center;
+}
+
+#bodyContent {
+	padding: 20px;
+}
+
+/*Item styling*/
+
+.itemContainer {
+	height: 250px;
+	width: 250px;
+	display: inline-box;
+	margin-right: 10px;
+	float: left;
+}
+
+.itemListing {
+	height: 250px;
+	width: 250px;
+	background-color: rgb(182, 182, 182);
+	margin-right: 10px;
+}
+
+.itemListing:hover {
+	background-color: rgb(228, 228, 228);
+}
+
+.itemListing .pictureFrame {
+	height: 100px;
+	width: 250px;
+	background-color: rgb(255, 255, 255);
+}
+
+.itemListing .pictureFrame img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.itemTitle {
+	background-color: rgb(255, 255, 255);
+	color: black;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+
+.itemTitle p {
+	margin-top: 0px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/*Detail Styling*/
+#showcase {
+	width: 75%;
+	height: 500px;
+}
+
+#showcase img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 
 /*footer*/

@@ -1,0 +1,41 @@
+{% extends parent_template|default:"cameras/base_camera.html" %}
+
+{% block title %}
+{{ block.super }} - Cameras
+{% endblock %}
+
+
+{% block content %}
+  <div id="bodyContainer">
+    <div id="bodyHeader">
+        <h3>Cameras</h3>
+        <h4>Available for rent.</h4>
+    </div>
+      <div id="bodyContent">
+        {% if cameras %}
+            {% load static %}
+            {% for camera in cameras %}
+              <div class="itemContainer">
+                <a href="{{ camera.id}}/">
+                  <div class="itemListing">
+                    <div class="pictureFrame">
+                      <img src={{ camera.picture_url }}>
+                    </div>
+                    <div class="itemTitle">
+                      <p class="alignCentered">{{ camera.manufacturer }} {{ camera.model }}</p>
+                    </div>
+                    <div class="text">
+                    <p>Sensor: {{ camera.sensor }}</p>
+                    <p>{{ camera.description }}</p>
+                    </div>
+                  </div>
+                </a>
+                </div>
+            {% endfor %}
+        {% else %}
+        <p class="alignCentered">No cameras available</p>
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock %}

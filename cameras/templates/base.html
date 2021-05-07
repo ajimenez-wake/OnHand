@@ -10,7 +10,7 @@
         {% load static %}
         {% block css %}
             <link rel="stylesheet" type="text/css"
-                href="{% static 'inventory/style.css' %}"/>
+                href="{% static 'cameras/style.css' %}"/>
         {% endblock %}
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,8 +21,7 @@
                 <div id="headerBar">
                     <div id="logoBlock">
                         <h1>
-                            <span class="colorBlack">CAMER</span>
-                            <span class="colorRed spacingNone">ental</span>
+                            <span class="colorBlack">CAMER</span><span class="colorRed spacingNone">ental</span>
                         </h1>
                         <h2>
                             CAMERA RENTAL HOUSE
@@ -32,8 +31,8 @@
                         <nav>
                             <ul>
                                 <li>
-                                    <a href="{% url 'inventory' %">
-                                        Inventory
+                                    <a href="{% url 'camera_list_view' %}">
+                                        Cameras
                                     </a>
                                 </li>
                             </ul>
@@ -48,7 +47,7 @@
         {% endblock %}
         <footer>
             <div id="footer">
-                <a class="colorWhite alignRight" href="{% url '' %">Return Home</a>
+                <a class="colorWhite alignRight" href="/admin">Django Admin</a>
             </div>
         </footer>
         </main>
