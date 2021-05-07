@@ -28,6 +28,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 ALLOWED_HOSTS = [
+    'on-hand-git-on-hand.apps-crc.testing',
     '*.apps-crc.testing',
     'localhost',
 ]
