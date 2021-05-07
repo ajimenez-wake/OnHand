@@ -1,4 +1,5 @@
 import environ
+import os.path
 """
 Django settings for on_hand project.
 
@@ -26,7 +27,7 @@ environ.Env.read_env()
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = [
     'on-hand-git-on-hand.apps-crc.testing',
     '*.apps-crc.testing',
@@ -45,6 +46,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+STATIC_ROOT = ''
+STATIC_URL = '/static/'
+STATIC_FILES_DIRS = (os.path.join('static'),)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
