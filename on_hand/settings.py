@@ -1,3 +1,4 @@
+import environ
 """
 Django settings for on_hand project.
 
@@ -20,12 +21,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-jv1alwgg0#zk_yu227o=#s1tms@=dqwgu90cyhcmskba@4ykrd'
+env = environ.Env()
+environ.Env.read_env()
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+DEBUG = False
+ALLOWED_HOSTS = [
+    '*.apps-crc.testing',
+    'localhost',
+]
 
 
 # Application definition
